@@ -1,0 +1,3 @@
+rootProject.name = 'familyday'
+
+include ':app'
