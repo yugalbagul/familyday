@@ -1,6 +1,6 @@
 import React from 'react';
-import { Image, Text, StyleSheet, View, StatusBar } from 'react-native';
-import LabeledCard from './LabeledCard'
+import { Image, StyleSheet, StatusBar, ScrollView } from 'react-native';
+import LabeledCard from './cards/LabeledCard'
 
 const styles = StyleSheet.create({
   container : {
@@ -18,9 +18,12 @@ class Home extends React.Component {
 
   render(){
     return(
-      <Image style={styles.container} resizeMode='cover'  source={require('../../assets/images/home-bg-image-hd.jpg')}>
+      <Image style={styles.container} resizeMode='cover'  source={require('../../assets/images/hearts-bw-img-hd.jpeg')}>
         <StatusBar backgroundColor={'black'} />
-        <LabeledCard />
+        <ScrollView >
+          <LabeledCard navigate={this.props.navigation.navigate}/>
+        </ScrollView>
+
       </Image>
     )
   }

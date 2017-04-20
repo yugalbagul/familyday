@@ -3,6 +3,9 @@ import { Animated, View, Easing } from 'react-native';
 
 
 export default class SpinningText extends React.Component {
+  static propTypes = {
+    navigate: React.PropTypes.func
+  }
   constructor(){
     super();
     this.animatedVal = new Animated.Value(0)
